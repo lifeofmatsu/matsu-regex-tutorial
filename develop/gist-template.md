@@ -56,6 +56,10 @@ Character classes enable matching for any one of several characters, defined wit
 - `[aeiou]`: Matches any one lowercase vowel.
 
 ### Flags
+Flags modify the behavior of a regex by altering how the regex search is performed. Common flags include `g` for global search, `i` for case-insensitive matching, or `m` for multiline matching. Our tutorial email regex is not composed of flags, but they can be added as needed if you need to change its function.
+
+**Example:**
+- `/abc/i`: Matches the set 'abc' in a case-insensitive manner.
 
 ### Grouping and Capturing
 
