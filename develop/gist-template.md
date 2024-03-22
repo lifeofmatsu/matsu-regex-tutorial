@@ -23,6 +23,7 @@ By the end of this tutorial, you will understand the regex pattern `/^([a-z0-9_\
 ## Regex Components
 
 ### Anchors
+Anchors are regex signifiers denoting the beginning and end of a line. In email validation regex, `^` designates the start of a line, whereas `$` designates the end of the line. Put together, these two symbols - the anchors - ensure that the pattern matches the string.
 
 ### Quantifiers
 
