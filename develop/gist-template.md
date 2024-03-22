@@ -118,4 +118,6 @@ Look-ahead and look-behind assertions allow the regex to include or exclude cert
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Justin (Jus) Ferrell is a Full-Stack Bootcamp student at UC San Diego.
+GitHub: https://github.com/lifeofmatsu
+LinkedIn: https://www.linkedin.com/in/lifeofmatsu/
