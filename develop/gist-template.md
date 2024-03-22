@@ -49,11 +49,13 @@ The `|` operator facilitates alternation, giving the regex engine two or more ma
 
 The `|` operator is notably advantageous within more complex regex patterns, significantly enhancing flexibility by accommodating multiple possible matches.
 
+
 ### Character Classes
 Character classes enable matching for any one of several characters, defined within square `[]` brackets. For instance, `[a-z]` matches any lowercase letter. In the context of our email regex, `[a-z0-9_\.-]` matches any lowercase letter, digit, underscore, period, or dash, which are nigh-ubiquitous characters in the username segment of an email address.
 
 **Example:**
 - `[aeiou]`: Matches any one lowercase vowel.
+
 
 ### Flags
 Flags modify the behavior of a regex by altering how the regex search is performed. Common flags include `g` for global search, `i` for case-insensitive matching, or `m` for multiline matching. Our tutorial email regex is not composed of flags, but they can be added as needed if you need to change its function.
@@ -61,7 +63,15 @@ Flags modify the behavior of a regex by altering how the regex search is perform
 **Example:**
 - `/abc/i`: Matches the set 'abc' in a case-insensitive manner.
 
+
 ### Grouping and Capturing
+Groups are created with parentheses . They capture the characters matched for later use. In our regex, `([a-z0-9_\.-]+)` captures the user name of the email.
+
+Parentheses `()` are characters designated for grouping and capturing. They specify a regex segment to group together, letting us apply quantifiers to the group altogether. They  capture the content matched by that part of the regex for later use. In our example, the character group `([a-z0-9_\.-]+)` captures the username component of an email address.
+
+**Example:**
+- `(abc)+`: Matches one or more occurrences of the sequence 'abc'.
+
 
 ### Bracket Expressions
 
