@@ -1,4 +1,5 @@
-# Matsu-Regex-Tutorial
+# Regex Tutorial: Demystifying Email Address Validation
+#### by Jus Ferrell
 
 In this tutorial guide, we expand on the topic of regular expressions (regex), focusing on a regex pattern used for email address validation. Grasping the email address validation regex will not only help you create signup, login, and other forms that require email with ease and confidence, but also further your knowledge of how regex is used to parse and match complex patterns when manipulating strings.
 
@@ -23,7 +24,11 @@ By the end of this tutorial, you will understand the regex pattern `/^([a-z0-9_\
 ## Regex Components
 
 ### Anchors
-Anchors are regex signifiers denoting the beginning and end of a line. In email validation regex, `^` designates the start of a line, whereas `$` designates the end of the line. Put together, these two symbols - the anchors - ensure that the pattern matches the string.
+Anchors are regex signifiers denoting the beginning and end of a line. They are, in fact, special characters that match position within the string rather than content. In email validation regex, the `^` anchor designates the start of a line, whereas the `$` designates the end. Effectively, these two anchors ensure that the match begins at the start of the string, and ends with the pattern we define, preventing any extra characters before or after the email address.
+
+Example:
+- `^[a-z]`: Matches a string that starts with a lowercase letter.
+- `[a-z]$`: Matches a string that ends with a lowercase letter.
 
 ### Quantifiers
 
