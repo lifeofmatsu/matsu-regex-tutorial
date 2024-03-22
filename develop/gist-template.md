@@ -86,6 +86,11 @@ Bracket expressions (`[]`) define a set of characters where any one of the chara
 Bracket expressions are essential for constructing patterns that require specific character matches, providing regex patterns both flexibility and precision.
 
 ### Greedy and Lazy Match
+Greedy and lazy matches control how much of the string is matched. Greedy matching attempts to match as much of the string as possible, while lazy matching stops as soon as a valid match is identified. In example, the `+` in our regex is "greedy", attempting to include as many of the characters within the preceding pattern.
+
+**Example:**
+- `a+`: Greedy matching as many letter 'a's as possible.
+
 
 ### Boundaries
 
