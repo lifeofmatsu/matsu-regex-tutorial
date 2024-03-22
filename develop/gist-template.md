@@ -101,6 +101,12 @@ Word boundaries, represented by `\b` in regex, are non-character markers that de
 
 
 ### Back-references
+Back-references in a regex refer to whatever was matched by a previous capturing group. They are denoted by a backslash followed by a number, where the number corresponds to the position of the capturing group in the pattern. Back-references are useful for matching repeated sequences or ensuring consistency within a match.
+
+**Example:**
+- `(a)\1`: Matches 'aa', where `\1` refers to the first capturing group `(a)`.
+- `(ab)\1`: Matches 'abab', where `\1` repeats the sequence captured by the first group.
+
 
 ### Look-ahead and Look-behind
 
