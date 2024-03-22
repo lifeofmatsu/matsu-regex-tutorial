@@ -26,7 +26,7 @@ By the end of this tutorial, you will understand the regex pattern `/^([a-z0-9_\
 ### Anchors
 Anchors are regex signifiers denoting the beginning and end of a line. They are, in fact, special characters that match position within the string rather than content. In email validation regex, the `^` anchor designates the start of a line, whereas the `$` designates the end. Effectively, these two anchors ensure that the match begins at the start of the string, and ends with the pattern we define, preventing any extra characters before or after the email address.
 
-Example:
+**Example:**
 - `^[a-z]`: Matches a string that starts with a lowercase letter.
 - `[a-z]$`: Matches a string that ends with a lowercase letter.
 
@@ -34,11 +34,20 @@ Example:
 ### Quantifiers
 Quantifiers describe the number of instances an individual or group of characters must appear in the string for a successful match. For example, in the regex `[a-z0-9_\.-]+`, the `+` quantifier means "one or more of the preceding element", indicating that one or more of the characters in `[a-z0-9_\.-]` MUST be present before the `@` symbol of the email.
 
-Example:
+**Example:**
 - `a+`: Matches one or more consecutive 'a' characters.
 
 
 ### OR Operator
+_While the regex for this tutorial does not use the OR operator (`|`) explicitly, it is good to be aware of it as it is seen often in other contexts._
+
+The `|` operator facilitates alternation, giving the regex engine two or more match options/alternatives at a specific point in the regex. Colloquially, this is like saying "Match either the pattern on the left side of the `|` or the pattern on the right side." While our email regex does not use the OR operator, it's invaluable in situations where multiple patterns are considered valid.
+
+**Example:**
+- `cat|dog`: Matches either 'cat' or 'dog'.
+- `(blue|green|red) car`: Matches 'blue car', 'green car', or 'red car'.
+
+The `|` operator is notably advantageous within more complex regex patterns, significantly enhancing flexibility by accommodating multiple possible matches.
 
 ### Character Classes
 
