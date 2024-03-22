@@ -39,7 +39,7 @@ Quantifiers describe the number of instances an individual or group of character
 
 
 ### OR Operator
-_While the regex for this tutorial does not use the OR operator (`|`) explicitly, it is good to be aware of it as it is seen often in other contexts._
+_While the regex for this tutorial does not use the OR operator (`|`) explicitly, it is good to be aware of its use as it is seen often in other contexts._
 
 The `|` operator facilitates alternation, giving the regex engine two or more match options/alternatives at a specific point in the regex. Colloquially, this is like saying "Match either the pattern on the left side of the `|` or the pattern on the right side." While our email regex does not use the OR operator, it's invaluable in situations where multiple patterns are considered valid.
 
@@ -50,6 +50,10 @@ The `|` operator facilitates alternation, giving the regex engine two or more ma
 The `|` operator is notably advantageous within more complex regex patterns, significantly enhancing flexibility by accommodating multiple possible matches.
 
 ### Character Classes
+Character classes enable matching for any one of several characters, defined within square `[]` brackets. For instance, `[a-z]` matches any lowercase letter. In the context of our email regex, `[a-z0-9_\.-]` matches any lowercase letter, digit, underscore, period, or dash, which are nigh-ubiquitous characters in the username segment of an email address.
+
+**Example:**
+- `[aeiou]`: Matches any one lowercase vowel.
 
 ### Flags
 
