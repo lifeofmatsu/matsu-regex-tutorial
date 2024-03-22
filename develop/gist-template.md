@@ -93,6 +93,12 @@ Greedy and lazy matches control how much of the string is matched. Greedy matchi
 
 
 ### Boundaries
+Word boundaries, represented by `\b` in regex, are non-character markers that denote the start and end points of words. They are used to ensure that the regex matches characters at the beginning or end of a word. This is particularly useful when you want to match whole words rather than substrings within words.
+
+**Example:**
+- `\bword\b`: This pattern ensures that 'word' is matched only when it stands alone, not as part of another word like 'keyword'.
+- `\bcat\b`: Matches 'cat' in "The cat meowed" but not in "The category was selected."
+
 
 ### Back-references
 
