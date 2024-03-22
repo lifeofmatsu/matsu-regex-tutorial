@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Matsu-Regex-Tutorial
 
-Introductory paragraph (replace this with your text)
+In this tutorial guide, we expand on the topic of regular expressions (regex), focusing on a regex pattern used for email address validation. Grasping the email address validation regex will not only help you create signup, login, and other forms that require email with ease and confidence, but also further your knowledge of how regex is used to parse and match complex patterns when manipulating strings.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+By the end of this tutorial, you will understand the regex pattern `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`, most commonly known for its use in email address validation. Together, we will break down, and piece together again each component of the regex pattern to better understand how it ensures each user's entry follows standard email format.
 
 ## Table of Contents
 
