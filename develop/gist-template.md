@@ -30,7 +30,13 @@ Example:
 - `^[a-z]`: Matches a string that starts with a lowercase letter.
 - `[a-z]$`: Matches a string that ends with a lowercase letter.
 
+
 ### Quantifiers
+Quantifiers describe the number of instances an individual or group of characters must appear in the string for a successful match. For example, in the regex `[a-z0-9_\.-]+`, the `+` quantifier means "one or more of the preceding element", indicating that one or more of the characters in `[a-z0-9_\.-]` MUST be present before the `@` symbol of the email.
+
+Example:
+- `a+`: Matches one or more consecutive 'a' characters.
+
 
 ### OR Operator
 
