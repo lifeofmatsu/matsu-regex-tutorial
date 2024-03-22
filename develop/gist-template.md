@@ -117,7 +117,8 @@ Look-ahead and look-behind assertions allow the regex to include or exclude cert
 
 
 ## Author
-
 Justin (Jus) Ferrell is a Full-Stack Bootcamp student at UC San Diego.
+
+Email: jferrell826@gmail.com
 GitHub: https://github.com/lifeofmatsu
 LinkedIn: https://www.linkedin.com/in/lifeofmatsu/
