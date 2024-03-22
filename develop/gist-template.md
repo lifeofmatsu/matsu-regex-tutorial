@@ -109,6 +109,12 @@ Back-references in a regex refer to whatever was matched by a previous capturing
 
 
 ### Look-ahead and Look-behind
+Look-ahead and look-behind assertions allow the regex to include or exclude certain patterns based on what comes before or after the main pattern without including those conditional patterns in the actual match. Look-ahead is denoted with `(?=...)` for positive look-ahead and `(?!...)` for negative look-ahead. Look-behind is represented by `(?<=...)` for positive look-behind and `(?<!...)` for negative look-behind.
+
+**Example:**
+- `q(?=u)`: Positive look-ahead that matches 'q' only if it's followed by 'u', as in 'queue'.
+- `(?<=\$)\d+`: Positive look-behind that matches one or more digits only if they are preceded by a dollar sign, as in '$100'.
+
 
 ## Author
 
