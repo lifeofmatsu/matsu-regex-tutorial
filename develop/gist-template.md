@@ -65,8 +65,6 @@ Flags modify the behavior of a regex by altering how the regex search is perform
 
 
 ### Grouping and Capturing
-Groups are created with parentheses . They capture the characters matched for later use. In our regex, `([a-z0-9_\.-]+)` captures the user name of the email.
-
 Parentheses `()` are characters designated for grouping and capturing. They specify a regex segment to group together, letting us apply quantifiers to the group altogether. They  capture the content matched by that part of the regex for later use. In our example, the character group `([a-z0-9_\.-]+)` captures the username component of an email address.
 
 **Example:**
@@ -74,6 +72,18 @@ Parentheses `()` are characters designated for grouping and capturing. They spec
 
 
 ### Bracket Expressions
+Bracket expressions (`[]`) define a set of characters where any one of the characters may be matched at that point of the regex. Characters placed inside square brackets are like instructions for the regex engine to match any one of those characters. This proves useful when matching characters from a specific set.
+
+- `[abc]`: Matches either 'a', 'b', or 'c'. It will match 'a' in "anchor", 'b' in "bracket", and 'c' in "capturing".
+- `[a-z]`: Matches any lowercase letter from 'a' to 'z'. Note that the range notation `-` is shorthand for delineating every character in that range.
+- `[0-9]`: Matches any digit from '0' to '9'.
+- `[^a-z]`: A caret `^` can be used at the beginning, inside square brackets, to "negate" a set of characters. This means matching any character that is NOT in the intended range or set. For example, `[^a-z]` will match any character that is not a lowercase letter.
+
+**Examples:**
+- `[aeiou]`: Matches any individual lowercase vowel. It will match 'e' in "regular" and 'a' in "flags".
+- `[1-3]`: Matches any of the integers '1', '2', or '3'. It would match '2' in "vitaminB12@gmail.com".
+
+Bracket expressions are essential for constructing patterns that require specific character matches, providing regex patterns both flexibility and precision.
 
 ### Greedy and Lazy Match
 
