@@ -24,7 +24,7 @@ By the end of this tutorial, you will understand the regex pattern `/^([a-z0-9_\
 ## Regex Components
 
 ### Anchors
-Anchors are regex signifiers denoting the beginning and end of a line. They are, in fact, special characters that match position within the string rather than content. In email validation regex, the `^` anchor designates the start of a line, whereas the `$` designates the end. Effectively, these two anchors ensure that the match begins at the start of the string, and ends with the pattern we define, preventing any extra characters before or after the email address.
+Anchors are regex indicators denoting the beginning and end of a line. They are, in fact, special characters that match position within the string rather than content. In email validation regex, the `^` anchor designates the start of a line, whereas the `$` designates the end. Effectively, these two anchors ensure that the match begins at the start of the string, and ends with the pattern we define, preventing any extra characters before or after the email address.
 
 **Example:**
 - `^[a-z]`: Matches a string that starts with a lowercase letter.
@@ -32,7 +32,7 @@ Anchors are regex signifiers denoting the beginning and end of a line. They are,
 
 
 ### Quantifiers
-Quantifiers describe the number of instances an individual or group of characters must appear in the string for a successful match. For example, in the regex `[a-z0-9_\.-]+`, the `+` quantifier means "one or more of the preceding element", indicating that one or more of the characters in `[a-z0-9_\.-]` MUST be present before the `@` symbol of the email.
+Quantifiers define the number of instances an individual or group of characters must appear in a string for a successful match. For example, in the regex `[a-z0-9_\.-]+`, the `+` quantifier means "one or more of the preceding element", indicating that one or more of the characters in `[a-z0-9_\.-]` MUST be present before the `@` symbol of the email.
 
 **Example:**
 - `a+`: Matches one or more consecutive 'a' characters.
@@ -45,7 +45,7 @@ The `|` operator facilitates alternation, giving the regex engine two or more ma
 
 **Example:**
 - `cat|dog`: Matches either 'cat' or 'dog'.
-- `(blue|green|red) car`: Matches 'blue car', 'green car', or 'red car'.
+- `(blue|green|red) car`: Matches 'blue Audi', 'green Audi', or 'red Audi'.
 
 The `|` operator is notably advantageous within more complex regex patterns, significantly enhancing flexibility by accommodating multiple possible matches.
 
@@ -72,21 +72,22 @@ Parentheses `()` are characters designated for grouping and capturing. They spec
 
 
 ### Bracket Expressions
-Bracket expressions (`[]`) define a set of characters where any one of the characters may be matched at that point of the regex. Characters placed inside square brackets are like instructions for the regex engine to match any one of those characters. This proves useful when matching characters from a specific set.
+Bracket expressions (`[]`) are used to define a set of characters where any one of the characters may be matched at that point of the regex. Characters placed inside square brackets are like instructions for the regex engine to match any one of those characters. This proves useful when matching characters from a specific set.
 
-- `[abc]`: Matches either 'a', 'b', or 'c'. It will match 'a' in "anchor", 'b' in "bracket", and 'c' in "capturing".
+- `[abc]`: Matches either 'a', 'b', or 'c'. It will match 'a' in "alphabet", 'b' in "bracket", and 'c' in "capturing".
 - `[a-z]`: Matches any lowercase letter from 'a' to 'z'. Note that the range notation `-` is shorthand for delineating every character in that range.
 - `[0-9]`: Matches any digit from '0' to '9'.
 - `[^a-z]`: A caret `^` can be used at the beginning, inside square brackets, to "negate" a set of characters. This means matching any character that is NOT in the intended range or set. For example, `[^a-z]` will match any character that is not a lowercase letter.
 
 **Examples:**
 - `[aeiou]`: Matches any individual lowercase vowel. It will match 'e' in "regular" and 'a' in "flags".
-- `[1-3]`: Matches any of the integers '1', '2', or '3'. It would match '2' in "vitaminB12@gmail.com".
+- `[1-3]`: Matches any of the integers '1', '2', or '3'. It would match '2' in "student200@gmail.com".
 
-Bracket expressions are essential for constructing patterns that require specific character matches, providing regex patterns both flexibility and precision.
+Bracket expressions are necessary for constructing patterns that require specific character matches, giving regex patterns both flexibility and precision.
+
 
 ### Greedy and Lazy Match
-Greedy and lazy matches control how much of the string is matched. Greedy matching attempts to match as much of the string as possible, while lazy matching stops as soon as a valid match is identified. In example, the `+` in our regex is "greedy", attempting to include as many of the characters within the preceding pattern.
+Greedy and lazy matches control the extent of string matching. Greedy matching aims to match as much of the string as possible, while lazy matching stops as soon as a valid match is found. In our regex, the `+` quantifier is "greedy" and tries to include as many characters as possible that match the preceding pattern.
 
 **Example:**
 - `a+`: Greedy matching as many letter 'a's as possible.
@@ -109,7 +110,7 @@ Back-references in a regex refer to whatever was matched by a previous capturing
 
 
 ### Look-ahead and Look-behind
-Look-ahead and look-behind assertions allow the regex to include or exclude certain patterns based on what comes before or after the main pattern without including those conditional patterns in the actual match. Look-ahead is denoted with `(?=...)` for positive look-ahead and `(?!...)` for negative look-ahead. Look-behind is represented by `(?<=...)` for positive look-behind and `(?<!...)` for negative look-behind.
+Look-ahead and look-behind assertions include or exclude certain patterns based on what comes before or after the main pattern and without including those conditional patterns in the actual match. Look-ahead is denoted with `(?=...)` for positive look-ahead and `(?!...)` for negative look-ahead. Look-behind is represented by `(?<=...)` for positive look-behind and `(?<!...)` for negative look-behind.
 
 **Example:**
 - `q(?=u)`: Positive look-ahead that matches 'q' only if it's followed by 'u', as in 'queue'.
